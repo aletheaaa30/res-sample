@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebApplication6.Models.login;
+@{
+    
+
+    string loginId = "";
+    string password = "";
+
+    <form asp-action="checkCredentials" method="post">
+
+            Email:
+                @Html.TextAreaFor(l => l.loginId);
+            Password:
+                @Html.TextAreaFor(l => l.password);
+            <input type="submit" value="Submit" />
+        
+    </form>
+    <p style="color: red"> @ViewBag.errorMessage</p>
+}

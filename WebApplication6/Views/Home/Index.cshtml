@@ -1,0 +1,15 @@
+﻿
+@model WebApplication6.Models.login;
+
+@{
+    
+    
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <input type="button" value="Login" onclick="window.location='@Url.Action("Login", "Home")'"/>
+  
+</div>
